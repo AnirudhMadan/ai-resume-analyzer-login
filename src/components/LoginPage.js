@@ -20,7 +20,7 @@ const LoginPage = () => {
       if (loginType === 'user') {
         window.location.href = 'https://ai-recruiter-agency-skillsift.streamlit.app/';
       } else {
-        window.location.href = 'https://recruiter-dashboard-dummy-url.com';
+        window.location.href = 'https://ai-resume-analyzer-yugc.onrender.com/';
       }
     } catch (error) {
       setError('Invalid email or password. Please try again.');
@@ -44,7 +44,7 @@ const LoginPage = () => {
       if (loginType === 'user') {
         window.location.href = 'https://ai-recruiter-agency-skillsift.streamlit.app/';
       } else {
-        window.location.href = 'https://recruiter-dashboard-dummy-url.com';
+        window.location.href = 'https://ai-resume-analyzer-yugc.onrender.com/';
       }
     } catch (error) {
       setError('Registration failed. ' + (error.message || 'Please try again.'));
@@ -62,7 +62,7 @@ const LoginPage = () => {
       if (loginType === 'user') {
         window.location.href = 'https://ai-recruiter-agency-skillsift.streamlit.app/';
       } else {
-        window.location.href = 'https://recruiter-dashboard-dummy-url.com';
+        window.location.href = 'https://ai-resume-analyzer-yugc.onrender.com/';
       }
     } catch (error) {
       setError('Google login failed. Please try again.');
