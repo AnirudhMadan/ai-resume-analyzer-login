@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { signInWithEmailAndPassword, signInWithPopup, createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth, googleProvider } from '../firebase';
+import { auth, googleProvider, registerWithEmail, loginWithEmail, signInWithGoogle } from '../firebase';
 import './LoginPage.css';
 
 const LoginPage = () => {
@@ -16,10 +15,8 @@ const LoginPage = () => {
     e.preventDefault();
     setIsLoading(true);
     setError('');
-
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      // Redirect based on login type
+      await loginWithEmail(email, password);
       if (loginType === 'user') {
         window.location.href = 'https://ai-recruiter-agency-skillsift.streamlit.app/';
       } else {
@@ -43,8 +40,7 @@ const LoginPage = () => {
       return;
     }
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      // Redirect after registration
+      await registerWithEmail(email, password);
       if (loginType === 'user') {
         window.location.href = 'https://ai-recruiter-agency-skillsift.streamlit.app/';
       } else {
@@ -62,8 +58,7 @@ const LoginPage = () => {
     setIsLoading(true);
     setError('');
     try {
-      await signInWithPopup(auth, googleProvider);
-      // Redirect based on login type
+      await signInWithGoogle();
       if (loginType === 'user') {
         window.location.href = 'https://ai-recruiter-agency-skillsift.streamlit.app/';
       } else {
