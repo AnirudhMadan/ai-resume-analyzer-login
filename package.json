@@ -2,6 +2,9 @@
   "name": "recruiter-login-app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
     "@testing-library/jest-dom": "^5.16.4",
